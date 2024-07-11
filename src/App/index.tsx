@@ -6,7 +6,7 @@ export default function App() {
     {
       tab: '国内',
       urlList: [
-        { pathname: '官网手机端测试环境', url: 'http://m.dev.techlent.com.cn' },
+        { pathname: '官网手机端测试环境', url: 'http://mdev.techlent.com.cn' },
         { pathname: '官网手机端正式环境', url: 'https://m.techlent.com.cn' },
         { pathname: '官网Web测试环境', url: 'http://dev.techlent.com.cn' },
         { pathname: '官网Web正式环境', url: 'https://techlent.com.cn' },
@@ -19,6 +19,26 @@ export default function App() {
         { pathname: '官网手机端正式环境', url: 'https://m.techlent.com' },
         { pathname: '官网Web测试环境', url: 'https://dev.techlent.net/' },
         { pathname: '官网Web正式环境', url: 'https://techlent.com/cn' },
+      ],
+    },
+    {
+      tab: '国内AI比赛',
+      urlList: [
+        { pathname: '管理系统-班级管理', url: 'http://dev.xyz.techlent.com.cn/class' },
+        { pathname: '导师控制台', url: 'http://mdev.techlent.com.cn/cn/operatorLogin' },
+        { pathname: '学生比赛', url: 'http://mdev.techlent.com.cn/cn/operatorLogin/cn/AIContest' },
+        { pathname: '学员端任务清单', url: 'http://mdev.techlent.com.cn/cn/user' },
+        { pathname: '大屏排行榜', url: 'http://mdev.techlent.com.cn/cn/AIContestRank?event=122&mode=Week1' },
+      ],
+    },
+    {
+      tab: '国外AI比赛生产环境',
+      urlList: [
+        { pathname: '比赛学生端-官网', url: 'https://m.techlent.com/cn/AIContest' },
+        { pathname: '比赛学生端-活动入口', url: 'https://m.techlent.com/cn/AIContest?source=zhongguancun' },
+        { pathname: '操作员控制界面', url: 'https://m.techlent.com/cn/operatorLogin' },
+        { pathname: '大屏规则', url: 'https://techlent.com/cn/AIContestRule/zhongguancun' },
+        { pathname: '大屏排行榜', url: ' https://techlent.com/cn/AIContestRank/zhongguancun' },
       ],
     },
   ]);
@@ -103,7 +123,7 @@ export default function App() {
           <div className="tabTitle">{item.tab}</div>
           {item.urlList?.map((url, urlIndex) => (
             <div key={url.url} className="addressContainer">
-              <div className="addressName" onClick={() => handleClick(url.url)}>{url.pathname}</div>
+              <div className="addressName" onClick={() => handleClick(url.url)} title={url.url}>{url.pathname}</div>
               {/* <div className="deleteButton" onClick={() => deleteAddress(index, urlIndex)}>删除地址</div> */}
             </div>
           ))}

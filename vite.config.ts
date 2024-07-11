@@ -27,7 +27,7 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3000, // 设置开发服务器端口
+    port: 3005, // 设置开发服务器端口
     proxy: {
       // 配置代理
       '/api': {
