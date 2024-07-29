@@ -117,7 +117,7 @@ export default function App() {
   };
 
   return (
-    <div className="main">
+    <div className="mainrootT-techlent-20240828-2-3-01">
       {linkList?.map((item, index) => (
         <div className="tabContainer" key={index}>
           <div className="tabTitle">{item.tab}</div>
