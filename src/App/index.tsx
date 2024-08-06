@@ -4,6 +4,13 @@ import './index.less'; // 导入自定义的样式文件
 export default function App() {
   const [linkList, setLinkList] = useState([
     {
+      tab: 'TopEdit',
+      urlList: [
+        { pathname: '测试环境', url: 'http://34.19.9.158/login' },
+        { pathname: '正式环境', url: 'http://34.82.59.91/login' },
+      ],
+    },
+    {
       tab: '国内',
       urlList: [
         { pathname: '官网手机端测试环境', url: 'http://mdev.techlent.com.cn' },
@@ -41,6 +48,7 @@ export default function App() {
         { pathname: '大屏排行榜', url: ' https://techlent.com/cn/AIContestRank/zhongguancun' },
       ],
     },
+
   ]);
 
   const [newTab, setNewTab] = useState('');
