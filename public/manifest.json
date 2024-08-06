@@ -1,7 +1,7 @@
 {
-  "name": "Techlent-links",
+  "name": "chrome-extension-react",
   "version": "1.0",
-  "description": "Techlent-links",
+  "description": "chrome-extension-react",
   "manifest_version": 3,
   "icons": {
     "16": "images/icon-16.png",

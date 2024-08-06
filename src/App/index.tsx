@@ -1,51 +1,51 @@
 import React, { useEffect, useState } from 'react';
-import './index.less'; // å¯¼å…¥è‡ªå®šä¹‰çš„æ ·å¼æ–‡ä»¶
+import './index.less'; // µ¼Èë×Ô¶¨ÒåµÄÑùÊ½ÎÄ¼ş
 
 export default function App() {
   const [linkList, setLinkList] = useState([
     {
       tab: 'TopEdit',
       urlList: [
-        { pathname: 'æµ‹è¯•ç¯å¢ƒ', url: 'http://34.19.9.158/login' },
-        { pathname: 'æ­£å¼ç¯å¢ƒ', url: 'http://34.82.59.91/login' },
+        { pathname: '²âÊÔ»·¾³', url: 'http://34.19.9.158/login' },
+        { pathname: 'ÕıÊ½»·¾³', url: 'http://34.82.59.91/login' },
       ],
     },
     {
-      tab: 'å›½å†…',
+      tab: '¹úÄÚ',
       urlList: [
-        { pathname: 'å®˜ç½‘æ‰‹æœºç«¯æµ‹è¯•ç¯å¢ƒ', url: 'http://mdev.techlent.com.cn' },
-        { pathname: 'å®˜ç½‘æ‰‹æœºç«¯æ­£å¼ç¯å¢ƒ', url: 'https://m.techlent.com.cn' },
-        { pathname: 'å®˜ç½‘Webæµ‹è¯•ç¯å¢ƒ', url: 'http://dev.techlent.com.cn' },
-        { pathname: 'å®˜ç½‘Webæ­£å¼ç¯å¢ƒ', url: 'https://techlent.com.cn' },
+        { pathname: '¹ÙÍøÊÖ»ú¶Ë²âÊÔ»·¾³', url: 'http://mdev.techlent.com.cn' },
+        { pathname: '¹ÙÍøÊÖ»ú¶ËÕıÊ½»·¾³', url: 'https://m.techlent.com.cn' },
+        { pathname: '¹ÙÍøWeb²âÊÔ»·¾³', url: 'http://dev.techlent.com.cn' },
+        { pathname: '¹ÙÍøWebÕıÊ½»·¾³', url: 'https://techlent.com.cn' },
       ],
     },
     {
-      tab: 'å›½å¤–',
+      tab: '¹úÍâ',
       urlList: [
-        { pathname: 'å®˜ç½‘æ‰‹æœºç«¯æµ‹è¯•ç¯å¢ƒ', url: 'https://mdev.techlent.net' },
-        { pathname: 'å®˜ç½‘æ‰‹æœºç«¯æ­£å¼ç¯å¢ƒ', url: 'https://m.techlent.com' },
-        { pathname: 'å®˜ç½‘Webæµ‹è¯•ç¯å¢ƒ', url: 'https://dev.techlent.net/' },
-        { pathname: 'å®˜ç½‘Webæ­£å¼ç¯å¢ƒ', url: 'https://techlent.com/cn' },
+        { pathname: '¹ÙÍøÊÖ»ú¶Ë²âÊÔ»·¾³', url: 'https://mdev.techlent.net' },
+        { pathname: '¹ÙÍøÊÖ»ú¶ËÕıÊ½»·¾³', url: 'https://m.techlent.com' },
+        { pathname: '¹ÙÍøWeb²âÊÔ»·¾³', url: 'https://dev.techlent.net/' },
+        { pathname: '¹ÙÍøWebÕıÊ½»·¾³', url: 'https://techlent.com/cn' },
       ],
     },
     {
-      tab: 'å›½å†…AIæ¯”èµ›',
+      tab: '¹úÄÚAI±ÈÈü',
       urlList: [
-        { pathname: 'ç®¡ç†ç³»ç»Ÿ-ç­çº§ç®¡ç†', url: 'http://dev.xyz.techlent.com.cn/class' },
-        { pathname: 'å¯¼å¸ˆæ§åˆ¶å°', url: 'http://mdev.techlent.com.cn/cn/operatorLogin' },
-        { pathname: 'å­¦ç”Ÿæ¯”èµ›', url: 'http://mdev.techlent.com.cn/cn/operatorLogin/cn/AIContest' },
-        { pathname: 'å­¦å‘˜ç«¯ä»»åŠ¡æ¸…å•', url: 'http://mdev.techlent.com.cn/cn/user' },
-        { pathname: 'å¤§å±æ’è¡Œæ¦œ', url: 'http://mdev.techlent.com.cn/cn/AIContestRank?event=122&mode=Week1' },
+        { pathname: '¹ÜÀíÏµÍ³-°à¼¶¹ÜÀí', url: 'http://dev.xyz.techlent.com.cn/class' },
+        { pathname: 'µ¼Ê¦¿ØÖÆÌ¨', url: 'http://mdev.techlent.com.cn/cn/operatorLogin' },
+        { pathname: 'Ñ§Éú±ÈÈü', url: 'http://mdev.techlent.com.cn/cn/operatorLogin/cn/AIContest' },
+        { pathname: 'Ñ§Ô±¶ËÈÎÎñÇåµ¥', url: 'http://mdev.techlent.com.cn/cn/user' },
+        { pathname: '´óÆÁÅÅĞĞ°ñ', url: 'http://mdev.techlent.com.cn/cn/AIContestRank?event=122&mode=Week1' },
       ],
     },
     {
-      tab: 'å›½å¤–AIæ¯”èµ›ç”Ÿäº§ç¯å¢ƒ',
+      tab: '¹úÍâAI±ÈÈüÉú²ú»·¾³',
       urlList: [
-        { pathname: 'æ¯”èµ›å­¦ç”Ÿç«¯-å®˜ç½‘', url: 'https://m.techlent.com/cn/AIContest' },
-        { pathname: 'æ¯”èµ›å­¦ç”Ÿç«¯-æ´»åŠ¨å…¥å£', url: 'https://m.techlent.com/cn/AIContest?source=zhongguancun' },
-        { pathname: 'æ“ä½œå‘˜æ§åˆ¶ç•Œé¢', url: 'https://m.techlent.com/cn/operatorLogin' },
-        { pathname: 'å¤§å±è§„åˆ™', url: 'https://techlent.com/cn/AIContestRule/zhongguancun' },
-        { pathname: 'å¤§å±æ’è¡Œæ¦œ', url: ' https://techlent.com/cn/AIContestRank/zhongguancun' },
+        { pathname: '±ÈÈüÑ§Éú¶Ë-¹ÙÍø', url: 'https://m.techlent.com/cn/AIContest' },
+        { pathname: '±ÈÈüÑ§Éú¶Ë-»î¶¯Èë¿Ú', url: 'https://m.techlent.com/cn/AIContest?source=zhongguancun' },
+        { pathname: '²Ù×÷Ô±¿ØÖÆ½çÃæ', url: 'https://m.techlent.com/cn/operatorLogin' },
+        { pathname: '´óÆÁ¹æÔò', url: 'https://techlent.com/cn/AIContestRule/zhongguancun' },
+        { pathname: '´óÆÁÅÅĞĞ°ñ', url: ' https://techlent.com/cn/AIContestRank/zhongguancun' },
       ],
     },
 
@@ -60,16 +60,16 @@ export default function App() {
   };
 
   // useEffect(() => {
-  //   // ä» localStorage ä¸­è¯»å– linkList
+  //   // ´Ó localStorage ÖĞ¶ÁÈ¡ linkList
   //   const storedLinkList = localStorage.getItem('linkListTechlent2024');
 
   //   if (storedLinkList !== "[]" && !storedLinkList) {
   //     setLinkList(JSON.parse(storedLinkList));
   //   } else {
-  //     // å¦‚æœ localStorage ä¸­æ²¡æœ‰å­˜å‚¨ linkListï¼Œåˆ™ä¿å­˜å½“å‰çš„ linkList åˆ° localStorage
+  //     // Èç¹û localStorage ÖĞÃ»ÓĞ´æ´¢ linkList£¬Ôò±£´æµ±Ç°µÄ linkList µ½ localStorage
   //     saveToLocalStorage(linkList);
   //   }
-  // }, []); // ç©ºæ•°ç»„ä½œä¸ºä¾èµ–ï¼Œåªåœ¨ç»„ä»¶æŒ‚è½½æ—¶æ‰§è¡Œä¸€æ¬¡
+  // }, []); // ¿ÕÊı×é×÷ÎªÒÀÀµ£¬Ö»ÔÚ×é¼ş¹ÒÔØÊ±Ö´ĞĞÒ»´Î
 
 
   const handleClick = (url) => {
@@ -132,7 +132,7 @@ export default function App() {
           {item.urlList?.map((url, urlIndex) => (
             <div key={url.url} className="addressContainer">
               <div className="addressName" onClick={() => handleClick(url.url)} title={url.url}>{url.pathname}</div>
-              {/* <div className="deleteButton" onClick={() => deleteAddress(index, urlIndex)}>åˆ é™¤åœ°å€</div> */}
+              {/* <div className="deleteButton" onClick={() => deleteAddress(index, urlIndex)}>É¾³ıµØÖ·</div> */}
             </div>
           ))}
           {/* <div className="formContainer">
@@ -141,7 +141,7 @@ export default function App() {
                 className="inputField"
                 style={{ width: 90 }}
                 type="text"
-                placeholder="åœ°å€åç§°"
+                placeholder="µØÖ·Ãû³Æ"
                 value={newAddressName}
                 onChange={(e) => setNewAddressName(e.target.value)}
               />
@@ -149,25 +149,25 @@ export default function App() {
                 className="inputField"
                 style={{ width: 90 }}
                 type="text"
-                placeholder="åœ°å€URL"
+                placeholder="µØÖ·URL"
                 value={newAddressURL}
                 onChange={(e) => setNewAddressURL(e.target.value)}
               />
             </div>
-            <button className="addButton" onClick={() => addNewAddress(index)}>æ·»åŠ åœ°å€</button>
+            <button className="addButton" onClick={() => addNewAddress(index)}>Ìí¼ÓµØÖ·</button>
           </div> */}
-          {/* <div className="deleteTabButton" onClick={() => deleteTab(index)}>åˆ é™¤tab</div> */}
+          {/* <div className="deleteTabButton" onClick={() => deleteTab(index)}>É¾³ıtab</div> */}
         </div>
       ))}
       {/* <div className="addTabContainer">
         <input
           className="inputField"
           type="text"
-          placeholder="æ–°tabåç§°"
+          placeholder="ĞÂtabÃû³Æ"
           value={newTab}
           onChange={(e) => setNewTab(e.target.value)}
         />
-        <button className="addButton" onClick={addNewTab}>æ·»åŠ æ–°tab</button>
+        <button className="addButton" onClick={addNewTab}>Ìí¼ÓĞÂtab</button>
       </div> */}
     </div>
   );

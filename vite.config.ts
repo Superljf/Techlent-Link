@@ -1,21 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-
 export default defineConfig({
- plugins: [
-    react(),
-  ],
-  css: {
-    preprocessorOptions: {
-      less: {
-        modifyVars: {
-          '@primary-color': '#00BEB0', // 修改为绿色，可以根据需要修改颜色值
-        },
-        javascriptEnabled: true,
-      },
-    },
-  },
+  plugins: [react()],
   build: {
     outDir: 'extension',
     rollupOptions: {
